@@ -6,6 +6,16 @@
     justify-content: center;
     flex-direction: column;
     margin-top: 28px;
+    input{
+        max-width: 700px;
+        height: 47px;
+        background-color: #404040;
+        border-radius: 15px;
+        border: none;
+        position: relative;
+        bottom: 110px;
+        right: 85px;
+    }
     h2{
         font-family: 'Rotterburg Stylish FREE';
         font-weight: 400;
