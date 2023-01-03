@@ -1,0 +1,12 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-center{
+        a{
+            margin-left: 30px;
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}

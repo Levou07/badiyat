@@ -1,0 +1,86 @@
+@import '../../sass/variables.scss';
+
+.about{
+    width: 1300px;
+    margin: 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-left{
+        img{
+            width: 582px;
+            height: 780px;
+            object-fit: contain;
+        }
+        .div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p{
+                font-family: 'Visuelt Pro';
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 144.4%;
+                color: #ffffff99;
+            }
+            h5{
+                font-family: 'Rotterburg Stylish FREE';
+                font-weight: 400;
+                font-size: 39px;
+                line-height: 144.4%;
+                color: $lightGray;
+            }
+            b{
+                width: 40px;
+                height: 3px;
+                background-color: $lightGray;
+                margin: 0 20px;
+                margin-top: -10px;
+            }
+        }
+    }
+    &-right{
+        width: 670px;
+        margin-left: 90px;
+        h2{
+            font-family: 'Rotterburg Stylish FREE';
+            font-weight: 400;
+            font-size: 48px;
+            line-height: 53px;
+            color: $lightGray;
+            margin-top: 30px;
+        }
+        p{
+            font-family: 'Steinbeck';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 144.4%;
+            color: #ffffffcc;
+            margin-top: 20px;
+        }
+        .p{
+            margin-left: 25px;
+            margin-top: 0;
+        }
+        h5{
+            font-family: 'Rotterburg Stylish FREE';
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 22px;
+            color: $lightGray;
+            span{
+                margin-right: 10px;
+            }
+        }
+        .spanH5{
+            margin-top: 30px;
+        }
+        .h5{
+            font-size: 31px;
+            margin-top: 53px;
+        }
+        ul{
+            margin-top: 20px;
+        }
+    }
+}

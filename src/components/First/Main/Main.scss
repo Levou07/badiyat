@@ -1,0 +1,47 @@
+@import '../../../sass/variables.scss';
+
+.inpBg{
+    max-width: 1200px;
+    height: 170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 4px 77px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    z-index: 10;
+    .searchH2{
+        font-family: 'Rotterburg Stylish FREE';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 31px;
+        line-height: 34px;
+        color: $lightGray;
+    }
+    .frm{
+        max-width: 1000px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 13px;
+        input{
+            width: 700px;
+            height: 47px;
+            background-color: #404040;
+            border-radius: 15px;
+            border: none;
+        }
+        button{
+            width: 160px;
+            height: 47px;
+            background-color: $lightGray;
+            border-radius: 15px;
+            margin-left: 14px;
+            transition: 0.5s all ease;
+            &:active{
+                background-color: $lightGray;
+                transform: scale(0.9);
+            }
+        }
+    }
+}
