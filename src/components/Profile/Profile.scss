@@ -1,0 +1,26 @@
+.profile{
+    .profile-top{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        div{
+            border-radius: 8px;
+            padding-left: 20px;
+        }
+        .myAccount{
+            display: flex;
+            align-items: center;
+            width: 300px;
+            height: 80px;
+            background-color: white;
+        }
+        .second{
+            display: flex;
+            align-items: center;
+            width: 300px;
+            height: 80px;
+            background-color: white;
+            margin-left: 10px;
+        }
+    }
+}

@@ -4,11 +4,10 @@ import { Context } from '../../../Context/Context'
 import jadidAdabiyoti from '../../../Data/Object'
 import './Footer.scss'
 
-const category = []
+const category = ['all']
 
 function Footer() {
     const {setBook} = useContext(Context)
-    const {setSear} = useContext(Context)
 
     const [id] = useState(0)
     const [search, setSearch] = useState([])
@@ -17,7 +16,7 @@ function Footer() {
 
     jadidAdabiyoti?.forEach((e,i)=>{
         if(!category.includes(e.type)){
-        category.push(e.type)
+            category.push(e.type)
         }
     })
 
@@ -50,7 +49,7 @@ function Footer() {
                             <li key={i} id={id} onClick={()=>
                             
                                 {
-                                    setBook(e);
+                                    setBook(e.id);
                                 }
                                 
                                 }>
@@ -81,7 +80,7 @@ function Footer() {
                                 <div className="card" style={{width: 173 + 'px', height: 236 + 'px'}}>
                                     <img src={e.images} className="card-img-top" alt="img" />
                                     <div className="card-body">
-                                        <h5 className="card-text">{e.nameBook}</h5>
+                                        <h5 className="card-text">{e.name}</h5>
                                         <p>{e.year}</p>
                                     </div>
                                     <div className="card-foot">
@@ -92,6 +91,58 @@ function Footer() {
                             </li>
                         </Link>
                     ))
+                }
+
+                {
+                    cate === 'all' ? jadidAdabiyoti.map((e,i)=>(
+                        <Link key={i} to='/about'>                                
+                            <li key={i} id={id} onClick={()=> 
+                            
+                                {
+                                    setBook(e);
+                                }
+                                
+                                }>
+                                <div className="card" style={{width: 173 + 'px', height: 236 + 'px'}}>
+                                    <img src={e.images} className="card-img-top" alt="img" />
+                                    <div className="card-body">
+                                        <h5 className="card-text">{e.name}</h5>
+                                        <p>{e.year}</p>
+                                    </div>
+                                    <div className="card-foot">
+                                        <button className="btn2"><i className="bi bi-journal"></i>34</button>
+                                        <button className="btn2"><i className="bi bi-earbuds"></i>13</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </Link>
+                    ))
+                    :
+                    search.length > 0 && cate === 'all' ? search.map((e,i)=>(
+                        <Link key={i} to='/about'>                                
+                            <li key={i} id={id} onClick={()=>
+                            
+                                {
+                                    setBook(e.id);
+                                }
+                                
+                                }>
+                                <div className="card" style={{width: 173 + 'px', height: 236 + 'px'}}>
+                                    <img src={e.images} className="card-img-top" alt="img" />
+                                    <div className="card-body">
+                                        <h5 className="card-text">{e.name}</h5>
+                                        <p>{e.year}</p>
+                                    </div>
+                                    <div className="card-foot">
+                                        <button className="btn2"><i className="bi bi-journal"></i>34</button>
+                                        <button className="btn2"><i className="bi bi-earbuds"></i>13</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </Link>
+                    ))
+                    :
+                    jadidAdabiyoti.map(e=> (e.name))
                 }
                 <Outlet/>
             </ul>

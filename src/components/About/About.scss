@@ -42,9 +42,35 @@
     &-right{
         width: 670px;
         margin-left: 90px;
+        .desc{
+            font-size: 16px;
+            font-family: sans-serif;
+            line-height: 28.4px;
+        }
+        .bookNames{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 10px 15px;
+            p{
+                margin: 5px 10px;
+                font-size: 18px;
+                font-family: sans-serif;
+                font-weight: 400;
+            }
+        }
+        .imgList{
+            display: flex;
+            width: 600px;
+            overflow-x: scroll;
+            &-item{
+                margin: 10px 40px;
+                margin-left: 0;
+            }
+        }
         h2{
-            font-family: 'Rotterburg Stylish FREE';
-            font-weight: 400;
+            font-family: sans-serif;
+            font-weight: lighter;
             font-size: 48px;
             line-height: 53px;
             color: $lightGray;
@@ -84,3 +110,26 @@
         }
     }
 }
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+    height: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $lightGray;
+    border-radius: 8px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c19e79;
+  }

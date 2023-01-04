@@ -15,6 +15,9 @@
         position: relative;
         bottom: 110px;
         right: 85px;
+        &::placeholder{
+            color: white;
+        }
     }
     h2{
         font-family: 'Rotterburg Stylish FREE';

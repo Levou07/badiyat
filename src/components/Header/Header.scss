@@ -9,4 +9,33 @@
             color: #fff;
         }
     }
+    &-right{
+        display: flex;
+        .profile{
+            display: flex;
+            align-items: center;
+            a{
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+                font-family: sans-serif;
+                font-weight: 400;
+            }
+            button{
+                background-color: transparent;
+                border: none;
+                margin: 0px 5px;
+            }
+            i{
+                color: white;
+            }
+        }
+    }
+}
+
+.none{
+    display: none;
+}
+.block{
+    display: block;
 }
