@@ -39,7 +39,7 @@ function Header() {
           </div>
           <div className="profile">
             <button className={none == 'block' ? 'none' : 'block'} onClick={()=> setNone('block')}><i className="bi bi-three-dots" onClick={()=> setNone('block')}></i></button>
-            <button className={none == 'none' ? 'none' : 'block'} onClick={()=> setNone('none')}><i class="bi bi-x-lg"></i></button>
+            <button className={none == 'none' ? 'none' : 'block'} onClick={()=> setNone('none')}><i className="bi bi-x-lg"></i></button>
             <Link to='/profile' className={none === 'none' ? 'none' : 'block'}>Profile</Link>
           </div>
         </div>

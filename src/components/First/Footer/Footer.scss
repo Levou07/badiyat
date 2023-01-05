@@ -1,4 +1,5 @@
 @import '../../../sass/variables.scss';
+@import 'https://unpkg.com/aos@2.3.1/dist/aos.css';
 
 .footer{
     display: flex;
@@ -6,6 +7,27 @@
     justify-content: center;
     flex-direction: column;
     margin-top: 28px;
+    &-list{
+        li{
+            position: relative;
+            opacity: 0.9;
+            transition: 0.5s ease all;
+            &::before{
+                position: absolute;
+                content: url('../../../img/before.png');
+                z-index: 10;
+                right: 0;
+                bottom: 20px;
+            }
+            &::after{
+                position: absolute;
+                content: url('../../../img/after.png');
+                z-index: 10;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
     input{
         max-width: 700px;
         height: 47px;
@@ -32,6 +54,14 @@
         display: flex;
         gap: 90px;
         flex-direction: row;
+        margin-left: 40px;
+        position: relative;
+        &::before{
+            content: url('../../../img/before2.png');
+            position: absolute;
+            top: -200px;
+            right: -200px;
+        }
         li{
             color: #ffffff99;
             font-family: sans-serif;
@@ -41,6 +71,7 @@
             line-height: 20px;
             margin: 0px 60px;
             cursor: pointer;
+            z-index: 10;
         }
         .btnAct{
             position: relative;
@@ -64,6 +95,8 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+        height: 500px;
+        overflow-y: scroll;
         li{
             margin: 10px;
             margin-top: 30px;

@@ -40,6 +40,20 @@
         }
     }
     &-right{
+        position: relative;
+        &::before{
+            content: url('../../img/before2.png');
+            position: absolute;
+            z-index: 10;
+            bottom: 20px;
+        }
+        &::after{
+            content: url('../../img/before3.png');
+            position: absolute;
+            z-index: 10;
+            bottom: 0;
+            right: -80px;
+        }
         width: 670px;
         margin-left: 90px;
         .desc{

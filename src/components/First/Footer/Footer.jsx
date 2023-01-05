@@ -1,3 +1,4 @@
+import Aos from 'aos'
 import React, { useContext, useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import { Context } from '../../../Context/Context'
@@ -7,6 +8,8 @@ import './Footer.scss'
 const category = ['all']
 
 function Footer() {
+    Aos.init()
+
     const {setBook} = useContext(Context)
 
     const [id] = useState(0)
@@ -42,16 +45,15 @@ function Footer() {
                     ))
                 };
             </ul>
-            <ul className='footer-list'>
+            <ul data-aos="fade-up" data-aos-duration="2000" className='footer-list'>
                 {   
                     search.length > 0 ? search.map((e,i)=>(
                         <Link key={i} to='/about'>                                
-                            <li key={i} id={id} onClick={()=>
-                            
+                            <li data-aos="fade-up" data-aos-duration="2000" key={i} id={id} onClick={()=>
                                 {
                                     setBook(e.id);
+                                    window.localStorage.setItem('id', e.id)
                                 }
-                                
                                 }>
                                 <div className="card" style={{width: 173 + 'px', height: 236 + 'px'}}>
                                     <img src={e.images} className="card-img-top" alt="img" />
@@ -70,10 +72,11 @@ function Footer() {
                     :
                     jadidAdabiyoti.filter(e=> e.type === cate).map((e,i)=>(
                         <Link key={i} to='/about'>                                
-                            <li key={i} id={id} onClick={()=> 
+                            <li data-aos="fade-up" data-aos-duration="2000" key={i} id={id} onClick={()=> 
                             
                                 {
                                     setBook(e);
+                                    window.localStorage.setItem('id', e.id)
                                 }
                                 
                                 }>
@@ -96,10 +99,11 @@ function Footer() {
                 {
                     cate === 'all' ? jadidAdabiyoti.map((e,i)=>(
                         <Link key={i} to='/about'>                                
-                            <li key={i} id={id} onClick={()=> 
+                            <li data-aos="fade-up" data-aos-duration="2000" key={i} id={id} onClick={()=> 
                             
                                 {
                                     setBook(e);
+                                    window.localStorage.setItem('id', e.id)
                                 }
                                 
                                 }>
@@ -120,10 +124,11 @@ function Footer() {
                     :
                     search.length > 0 && cate === 'all' ? search.map((e,i)=>(
                         <Link key={i} to='/about'>                                
-                            <li key={i} id={id} onClick={()=>
+                            <li data-aos="fade-up" data-aos-duration="2000" key={i} id={id} onClick={()=>
                             
                                 {
                                     setBook(e.id);
+                                    window.localStorage.setItem('id', e.id)
                                 }
                                 
                                 }>
@@ -144,7 +149,6 @@ function Footer() {
                     :
                     jadidAdabiyoti.map(e=> (e.name))
                 }
-                <Outlet/>
             </ul>
         </div>
     </div>

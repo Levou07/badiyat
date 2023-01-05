@@ -1,30 +1,15 @@
-import React from 'react'
-import './Profile.scss'
+import React, { useContext } from 'react'
+import { Context } from '../../../Context/Context'
+import './Menu.scss'
 
-import myAcc from '../../img/myAcc.png'
-import two from '../../img/two.png'
-import { Link } from 'react-router-dom'
+function Menu() {
+    const {dark} = useContext(Context)
 
-function Profile() {
   return (
-    <div className='container'>
-        <div className="profile">
-            <div className="profile-top">
-                <Link to='/profile'>
-                    <div className="myAccount">
-                        <img src={myAcc} alt="AccountImg" />
-                        <h2>My Account</h2>
-                    </div>
-                </Link>
-                <Link to='/settings'>
-                    <div className="second">
-                        <img src={two} alt="Settings" />
-                        <h2>Settings</h2>
-                    </div>
-                </Link>
-            </div>
-            <div className="profile-bottom">
-                <h3>Change or Recover Your Password</h3>
+    <div>
+        <div className={dark === true ? 'dark menu' : 'menu'}>
+            <div className="menu-bottom">
+                <h3 className={dark === true ? 'dark' : ''}>Change or Recover Your Password</h3>
                 <div className="email">
                     <b>Email</b>
                     <input type="text" placeholder='admin@mail.ru'/>
@@ -53,4 +38,4 @@ function Profile() {
   )
 }
 
-export default Profile
+export default Menu

@@ -1,0 +1,115 @@
+@import '../../sass/variables.scss';
+
+.slider{
+    position: relative;
+    .slideBtn{
+        position: absolute;
+        left: -930px;
+        bottom: 80px;
+        button{
+            width: 60px;
+        }
+    }
+    img{
+        height: 400px;
+        object-fit: cover;
+        padding: 20px;
+        border-radius: 30px;
+    }
+}
+.search{
+    background: #191919;
+    box-shadow: 0px 4px 77px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    width: 1100px;
+    height: 160px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h3{
+        text-align: center;
+        color: $lightGray;
+        font-family: sans-serif;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        input{
+            background: #404040;
+            border-radius: 15px;
+            width: 710px;
+            height: 50px;
+            border: none;
+            outline: none;
+            padding: 27px 16px;
+            resize: both;
+            color: white;
+            &::placeholder{
+                color: white;
+            }
+        }
+        button{
+            padding: 14px 66px;
+            background-color: $lightGray;
+            border-radius: 15px;
+            margin-left: 10px;
+            i{
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.nasr{
+    .cate{
+        &-list{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: $lightGray;
+        }
+    }
+    .kitoblar{
+        &-list{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            height: 600px;
+            overflow-y: scroll;
+            &-item{
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
+                .bookImg{
+                    width: 164px;
+                    height: 246px;
+                    object-fit: cover;
+                    border-radius: 15px;
+                }
+                b{
+                    color: $lightGray;
+                    font-size: 18px;
+                    font-weight: 400;
+                    font-family: sans-serif;
+                }
+                p{
+                    color: #ffffff99;
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-family: sans-serif;
+                    span{
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+

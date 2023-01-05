@@ -3,9 +3,19 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        a{
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 21px;
+            color: #152540;
+            align-items: center;
+        }
         div{
             border-radius: 8px;
             padding-left: 20px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
         }
         .myAccount{
             display: flex;
@@ -21,6 +31,12 @@
             height: 80px;
             background-color: white;
             margin-left: 10px;
+        }
+        .white{
+            background: #d6cfcf;
+        }
+        .black{
+            background: #FFFFFF;
         }
     }
 }

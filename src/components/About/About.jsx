@@ -7,7 +7,6 @@ import star from '../../img/star.png'
 import jadidAdabiyoti from '../../Data/Object'
 
 const category = []
-const ids = []
 
 function About() {
     const {book} = useContext(Context)
@@ -15,24 +14,15 @@ function About() {
 
     jadidAdabiyoti?.forEach((e,i)=>{
         if(!category.includes(e)){
-            category.push(e.books)
+            category.push(e)
         }
     })
-    jadidAdabiyoti?.forEach((e,i)=>{
-        if(!ids.includes(e.id)){
-            ids.push(e.id)
-        }
-    })
-
-    // ids.map((e)=> book.id === e ? setCate(e) : console.log('err'))
-    // console.log(cate);
 
   return (
 
     <div>
         {
-            
-            book.id === '1' || '2' || '3' ? jadidAdabiyoti.filter((e)=> e.id === book.id).map((e,i)=> (
+            book.id === '1' || '2' ? jadidAdabiyoti.filter((e)=> e.id === localStorage.getItem('id')).map((e,i)=> (
                 <div className="about" key={i}>
                     <div className='about-left'>
                         <img src={e.images} alt="hoshim" className='left-img'/>
