@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom'
 
 function Header() {
   const [none, setNone] = useState('none')
-  console.log(none);
 
   return (
     <div>

@@ -13,9 +13,9 @@ function Settings() {
         <div className="settings-info">
           <h3>Settings</h3>
           <div>
-            <b>Name</b>
+            <b>Name <span className='span'>{window.localStorage.getItem('userName')}</span> </b>
             <input type="text" placeholder='Name' className='input'/>
-            <p>Please Enter Your Name</p>
+            <p>Please Enter Your new Name</p>
 
             <b>Theme</b>
             <label htmlFor="lbl" className='lbl'>

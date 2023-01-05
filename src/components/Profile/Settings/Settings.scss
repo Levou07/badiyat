@@ -1,3 +1,5 @@
+@import '../../../sass/variables.scss';
+
 .dark{
     background-color: #191919 !important;
     b,p,h3{
@@ -21,7 +23,7 @@
                 background-color: #F3F6F9;
                 padding: 19px 12px;
                 outline: none;
-                margin-top: 7;
+                margin-top: 14px;
             }
             b{
                 margin-top: 32px;
@@ -29,6 +31,28 @@
                 font-weight: 600;
                 font-size: 16px;
                 line-height: 20px;
+                .span{
+                    font-size: 30px;
+                    font-family: sans-serif;
+                    font-weight: 400;
+                    color: $lightGray;
+                    text-transform: capitalize;
+                    margin-left: 10px;
+                    cursor: pointer;
+                    position: relative;
+                    animation: opacit 5s infinite;
+                    &::before{
+                        content: "";
+                        width: 0;
+                        position: absolute;
+                        bottom: -10px;
+                        height: 3px;
+                        border-radius: 5px;
+                        color: $lightGray;
+                        background-color: $lightGray;
+                        animation: lini 5s infinite;
+                    }
+                }
             }
             p{
                 font-family: 'Poppins';
@@ -69,5 +93,25 @@
                 }
             }
         }
+    }
+}
+
+@keyframes lini {
+    from{
+        height: 5px;
+        width: 0%;
+    }
+    to{
+        height: 5px;
+        width: 120%;
+    }
+}
+
+@keyframes opacit{
+    from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
     }
 }
