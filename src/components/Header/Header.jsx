@@ -11,7 +11,7 @@ function Header() {
 
   return (
     <div>
-      <div className="wrapper">
+      <div className={window.localStorage.getItem('pass') == 'togri' ? 'wrapper' : 'wrapperNone'}>
         <div className="wrapper-logo">
           <img src={logo} alt="Logo" />
         </div>
@@ -34,7 +34,7 @@ function Header() {
         </div>
         <div className="wrapper-right">
           <div>
-            <img src={profile} alt="profile" />
+            <img className='ProfileImg' src={window.localStorage.getItem('profileImg')} alt="profile" />
           </div>
           <div className="profile">
             <button className={none == 'block' ? 'none' : 'block'} onClick={()=> setNone('block')}><i className="bi bi-three-dots" onClick={()=> setNone('block')}></i></button>

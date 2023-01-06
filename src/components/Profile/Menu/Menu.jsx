@@ -26,7 +26,7 @@ function Menu() {
                         <input type="text" placeholder='***'/>
                         <p>Enter your New Password</p>
                     </div>
-                    <div>
+                    <div className='secondInp'>
                         <b>Confirm Password</b>
                         <input type="text" placeholder='***'/>
                         <p>Confirm your New Password</p>
