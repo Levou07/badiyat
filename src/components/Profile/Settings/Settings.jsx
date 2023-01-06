@@ -7,6 +7,7 @@ import profile from '../../../img/profile.png'
 function Settings() {
   const [mode, setMode] = useState(window.localStorage.getItem('mode'))
   const {setDark} = useContext(Context)
+  const [name, setName] = useState('')
 
   const [img, setImg] = useState('')
 
@@ -17,14 +18,30 @@ function Settings() {
     window.localStorage.setItem('profileImg', `${ff}`)
     e.target.reset()
   }
+  const handleName = (e)=>{
+    e.preventDefault()
+    const nam = e.target.nam.value
+    setName(`${nam}`)
+    window.localStorage.setItem('newName', `${nam}`)
+    console.log(name);
+    e.target.reset()
+  }
 
   return (
     <div className={mode === true && window.localStorage.getItem('mode') ? 'dark settings' : 'settings'}>
       <div className="settings-info">
         <h3>Settings</h3>
         <div className='settings-info-div'>
-          <b>Name <span className='span'>{window.localStorage.getItem('userName')}</span> </b>
-          <input type="text" placeholder='Name' className='input'/>
+          <b>Name <span className='span'>{window.localStorage.getItem('newName') ? window.localStorage.getItem('newName') : window.localStorage.getItem('userName')}</span> </b>
+          <form onSubmit={handleName} action="#" className="frm">
+            <div className="input-group">
+              <div className="form-floating">
+                <input name="nam" type="text" className="form-control input" id="floatingInputGroup1" placeholder="New Name"/>
+                <label htmlFor="floatingInputGroup1 mb1">New Name</label>
+              </div>
+              <button type='submit' className="input-group-text btn btn-success">Set</button>
+            </div>
+          </form>
           <p>Please Enter Your new Name</p>
 
           <b>Theme</b>
